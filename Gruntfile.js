@@ -38,7 +38,7 @@ module.exports = function (grunt) {
     // register tasks
     grunt.registerTask('default', ['parallel']);
 
-    grunt.registerTask('run_XP_firefox_46', ['shell:runTests:XP:firefox:46', 'shell:createReport:XP:firefox:42']);
+    grunt.registerTask('run_XP_firefox_46', ['shell:runTests:XP:firefox:46', 'shell:createReport:XP:firefox:46']);
     grunt.registerTask('run_Mac_chrome_50', ['shell:runTests:OS X 10.9:chrome:45', 'shell:createReport:OS X 10.9README.md:chrome:45']);
     grunt.registerTask('run_Windows10_edge', ['shell:runTests:"Windows 10":MicrosoftEdge:"20.10240"', 'shell:createReport:"Windows 10":MicrosoftEdge:"20.10240"']);
     grunt.registerTask('run_Windows7_ie_11', ['shell:runTests:"Windows 7":"internet explorer":11', 'shell:createReport:"Windows 7":"internet explorer":11']);
