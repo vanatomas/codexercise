@@ -52,7 +52,7 @@ module.exports = function() {
         port: 80,
         logLevel: "silent"
     });
-
+};
     // setup promises
     chaiAsPromised.transferPromiseness = global.client.transferPromiseness;
 

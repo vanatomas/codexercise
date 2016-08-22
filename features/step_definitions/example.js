@@ -18,9 +18,9 @@ module.exports = function() {
         this.driver.findElement({css: "#fbemail"}).sendKeys("saucedemo@gmail.com");
     });
 
-    this.Then(/^the email input value field should contain saucedemo@gmail.com$/, function () {
+    this.Then(/^the email input value field should contain "([^"]*)"$/, function (email_id) {
         this.driver.findElement({css: "#fbemail"}).getText().then(function(email) {
-            assert(email.contains("saucedemo@gmail.com"))
+            assert(email.contains(email_id))
     });
 
     });
@@ -45,10 +45,10 @@ module.exports = function() {
         });
     });
 
-    this.Then(/^User clicks I am a link$/, function () {
+    this.Then(/^User clicks "([^"]*)"$/, function (link) {
         this.driver.findElement({id: "#i am a link"}).click();
         this.driver.findElement({id: "#i_am_an_id"}).getText().then(function(the_page_source) {
-            assert(the_page_source.contains("I am another div"))
+            assert(the_page_source.contains(link))
         });
 
     });
